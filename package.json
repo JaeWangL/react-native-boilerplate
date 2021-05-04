@@ -4,8 +4,14 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android:apk": "cd android && ./gradlew assembleRelease",
+    "android:release": "react-native run-android --variant=release",
     "ios": "react-native run-ios",
+    "ios:release": "react-native run-ios --configuration Release",
+    "ios:iphone8p": "react-native run-ios  --simulator='iPhone 8 Plus'",
+    "ios:iphone11p": "react-native run-ios  --simulator='iPhone 11 Pro'",
     "start": "react-native start",
+    "start:reset": "react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint ."
   },
