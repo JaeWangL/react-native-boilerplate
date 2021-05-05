@@ -30,7 +30,7 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@app/*": ["app/*"],
+      "@/*": ["app/*"],
       "@assets/*": ["/assets/*"],
     }
   },
