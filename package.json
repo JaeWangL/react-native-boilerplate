@@ -22,14 +22,19 @@
   "dependencies": {
     "@emotion/native": "^11.0.0",
     "@emotion/react": "^11.1.5",
+    "@react-native-async-storage/async-storage": "^1.15.4",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/bottom-tabs": "^5.11.10",
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.4",
+    "i18next": "^20.2.2",
+    "lodash": "^4.17.21",
     "react": "17.0.2",
     "react-fast-compare": "^3.2.0",
+    "react-i18next": "^11.8.15",
     "react-native": "0.64.0",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-localize": "^2.0.3",
     "react-native-reanimated": "^2.1.0",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.1.1"
@@ -37,6 +42,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@babel/runtime": "^7.14.0",
+    "@types/lodash": "^4.14.168",
     "@types/react": "^17.0.4",
     "@types/react-native": "^0.64.4",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
