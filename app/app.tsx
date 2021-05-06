@@ -1,15 +1,21 @@
 import 'react-native-gesture-handler';
-import React from 'react';
-import { useColorScheme, LogBox, StatusBar } from 'react-native';
+import React, { useEffect } from 'react';
+import { useColorScheme, StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { enableScreens } from 'react-native-screens';
 import { ThemeProvider } from '@emotion/react';
 import AppNavigator from '@/navigation/app.navigator';
 import { darkheme, lightTheme } from '@/styles/theme';
+import { I18n } from '@/i18n';
 
-LogBox.ignoreLogs(['Non-serializable values were found in the navigation state']);
+enableScreens();
 
 function App(): JSX.Element {
   const colorScheme = useColorScheme();
+
+  useEffect(() => {
+    I18n.init();
+  }, []);
 
   return (
     <ThemeProvider theme={colorScheme === 'dark' ? darkheme : lightTheme}>
