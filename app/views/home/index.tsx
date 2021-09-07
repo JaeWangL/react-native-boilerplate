@@ -1,15 +1,16 @@
 import React from 'react';
 import IsEqual from 'react-fast-compare';
 import { useTranslation } from 'react-i18next';
-import { Container, Description } from './styles';
+import { Text, View } from 'react-native';
+import { styles } from './styles';
 
 function HomeView(): JSX.Element {
   const [t] = useTranslation(['common']);
 
   return (
-    <Container>
-      <Description>{t('tabHome')}</Description>
-    </Container>
+    <View style={styles.container}>
+      <Text style={styles.description}>{t('tabHome')}</Text>
+    </View>
   );
 }
 

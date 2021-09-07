@@ -1,11 +1,12 @@
-import styled from '@emotion/native';
+import { StyleSheet } from 'react-native';
 
-export const Container = styled.View`
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Description = styled.Text`
-  color: #414144;
-`;
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  description: {
+    color: '#414144',
+  }
+});
