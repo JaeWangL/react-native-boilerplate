@@ -1,13 +1,14 @@
 import React from 'react';
 import IsEqual from 'react-fast-compare';
-import { Container, Description } from './styles';
+import { Text, View } from 'react-native';
+import { styles } from './styles';
 
-function TotalAssetsView(): JSX.Element {
+function HomeView(): JSX.Element {
   return (
-    <Container>
-      <Description>Total Assets</Description>
-    </Container>
+    <View style={styles.container}>
+      <Text style={styles.description}>Total Assets</Text>
+    </View>
   );
 }
 
-export default React.memo(TotalAssetsView, IsEqual);
+export default React.memo(HomeView, IsEqual);

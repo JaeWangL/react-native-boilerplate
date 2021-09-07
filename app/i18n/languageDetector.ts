@@ -2,8 +2,7 @@ import noop from 'lodash/noop';
 import { findBestAvailableLanguage } from 'react-native-localize';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { appConfigs, storageKeys } from '@/configs';
-import en from './locales/en.json';
-import ko from './locales/ko.json';
+import { en, ko } from './locales';
 
 export const languagesResources = {
   en,

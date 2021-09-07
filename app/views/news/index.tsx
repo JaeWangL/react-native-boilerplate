@@ -1,13 +1,14 @@
 import React from 'react';
 import IsEqual from 'react-fast-compare';
-import { Container, Description } from './styles';
+import { Text, View } from 'react-native';
+import { styles } from './styles';
 
-function NewsView(): JSX.Element {
+function HomeView(): JSX.Element {
   return (
-    <Container>
-      <Description>News</Description>
-    </Container>
+    <View style={styles.container}>
+      <Text style={styles.description}>News</Text>
+    </View>
   );
 }
 
-export default React.memo(NewsView, IsEqual);
+export default React.memo(HomeView, IsEqual);
