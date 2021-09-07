@@ -57,7 +57,7 @@ yarn-error.log
 buck-out/
 \.buckd/
 android/app/libs
-*.keystore
+prod.keystore
 
 # Vim
 [._]*.s[a-w][a-z]
