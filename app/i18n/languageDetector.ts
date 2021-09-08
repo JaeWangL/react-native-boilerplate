@@ -1,15 +1,10 @@
 import noop from 'lodash/noop';
 import { findBestAvailableLanguage } from 'react-native-localize';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { appConfigs, storageKeys } from '@/configs';
-import { en, ko } from './locales';
+import { storageKeys } from '@/configs';
+import { defaultLanguage, languagesResources } from './languageConfig';
 
-export const languagesResources = {
-  en,
-  ko,
-};
-
-const RNLanguageDetector = {
+export const languageDetector = {
   type: 'languageDetector',
   async: true,
   detect: async (cb: (detectedLocale: string) => void): Promise<void> => {
@@ -19,12 +14,12 @@ const RNLanguageDetector = {
         const languageTags = Object.keys(languagesResources);
         const detectedLocale = findBestAvailableLanguage(languageTags);
 
-        return cb(detectedLocale?.languageTag ?? appConfigs.defaultLang);
+        return cb(detectedLocale?.languageTag ?? defaultLanguage);
       }
 
       cb(persistedLocale);
     } catch {
-      cb(appConfigs.defaultLang);
+      cb(defaultLanguage);
     }
   },
   init: noop,
@@ -32,5 +27,3 @@ const RNLanguageDetector = {
     AsyncStorage.setItem(storageKeys.localeKey, locale);
   },
 };
-
-export default RNLanguageDetector;
