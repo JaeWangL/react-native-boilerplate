@@ -393,8 +393,6 @@ PODS:
   - RNScreens (3.6.0):
     - React-Core
     - React-RCTImage
-  - RNSVG (12.1.1):
-    - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -460,7 +458,6 @@ DEPENDENCIES:
   - RNLocalize (from `../node_modules/react-native-localize`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
-  - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -553,8 +550,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
-  RNSVG:
-    :path: "../node_modules/react-native-svg"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -609,7 +604,6 @@ SPEC CHECKSUMS:
   RNLocalize: 7f1e5792b65a839af55a9552d05b3558b66d017e
   RNReanimated: 48e578538b2fad573d3d5ce2e80ad375e1534d87
   RNScreens: eb0dfb2d6b21d2d7f980ad46b14eb306d2f1062e
-  RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   Yoga: aa0cb45287ebe1004c02a13f279c55a95f1572f4
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
