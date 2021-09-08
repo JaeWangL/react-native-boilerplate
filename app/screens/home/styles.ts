@@ -8,5 +8,5 @@ export const styles = StyleSheet.create({
   },
   description: {
     color: '#414144',
-  }
+  },
 });

@@ -1,1 +1,7 @@
-export { default as common } from './common.json';
+import lgCommon from './common';
+
+export default {
+  common: {
+    ...lgCommon,
+  },
+};

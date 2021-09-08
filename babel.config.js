@@ -10,11 +10,11 @@ module.exports = {
     [
       'module-resolver',
       {
-        root: ['./app'],
+        root: ['./'],
         extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
         alias: {
           '@': './app',
-          '@aseets': './assets/',
+          '@aseets': './assets',
         },
       },
     ],

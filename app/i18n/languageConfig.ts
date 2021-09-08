@@ -1,7 +1,8 @@
-import en from './locales/en.json';
-import it from './locales/ko.json';
+import en from './locales/en';
+import ko from './locales/ko';
 
+export const defaultLanguage = 'en';
 export const languagesResources = {
   en,
-  it,
+  ko,
 };

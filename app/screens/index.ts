@@ -1,5 +1,5 @@
-export { default as HomeView } from './home';
-export { default as MarketsView } from './markets';
-export { default as NewsView } from './news';
-export { default as SettingsView } from './settings';
-export { default as TotalAssetsView } from './totalAssets';
+export { default as DietScreen } from './diet';
+export { default as HomeScreen } from './home';
+export { default as NoticesScreen } from './notices';
+export { default as SettingsScreen } from './settings';
+export { default as ShuttleScreen } from './shuttle';
