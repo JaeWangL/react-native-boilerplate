@@ -6,6 +6,7 @@ import { BlurView } from '@react-native-community/blur';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { TabbarIcon } from '@/components';
 import { MainTabsParamList, ViewTypes } from '@/configs';
+import { useSettingsStore } from '@/hooks';
 import { DietScreen, HomeScreen, NoticesScreen, SettingsScreen, ShuttleScreen } from '@/screens';
 import { defaultTheme } from '@/styles';
 import { styles } from './styles';
@@ -13,6 +14,7 @@ import { styles } from './styles';
 const BottomTab = createBottomTabNavigator<MainTabsParamList>();
 
 function MainTabsNavigator(): JSX.Element {
+  const { settings } = useSettingsStore();
   const [t] = useTranslation(['common']);
 
   const renderTabbarBG = useCallback((): ReactNode => {
@@ -34,6 +36,7 @@ function MainTabsNavigator(): JSX.Element {
         options={{
           tabBarLabel: t('common:tabHome'),
           tabBarIcon: ({ focused, color }) => <TabbarIcon type="home" focused={focused} color={color} />,
+          tabBarBadge: settings.badges[0].badgeCount !== 0 ? settings.badges[0].badgeCount : undefined,
         }}
       />
       <BottomTab.Screen
@@ -42,6 +45,7 @@ function MainTabsNavigator(): JSX.Element {
         options={{
           tabBarLabel: t('common:tabShuttle'),
           tabBarIcon: ({ focused, color }) => <TabbarIcon type="shuttle" focused={focused} color={color} />,
+          tabBarBadge: settings.badges[1].badgeCount !== 0 ? settings.badges[1].badgeCount : undefined,
         }}
       />
       <BottomTab.Screen
@@ -50,6 +54,7 @@ function MainTabsNavigator(): JSX.Element {
         options={{
           tabBarLabel: t('common:tabDiet'),
           tabBarIcon: ({ focused, color }) => <TabbarIcon type="diet" focused={focused} color={color} />,
+          tabBarBadge: settings.badges[2].badgeCount !== 0 ? settings.badges[2].badgeCount : undefined,
         }}
       />
       <BottomTab.Screen
@@ -58,6 +63,7 @@ function MainTabsNavigator(): JSX.Element {
         options={{
           tabBarLabel: t('common:tabNotices'),
           tabBarIcon: ({ focused, color }) => <TabbarIcon type="notices" focused={focused} color={color} />,
+          tabBarBadge: settings.badges[3].badgeCount !== 0 ? settings.badges[3].badgeCount : undefined,
         }}
       />
       <BottomTab.Screen
@@ -66,6 +72,7 @@ function MainTabsNavigator(): JSX.Element {
         options={{
           tabBarLabel: t('common:tabSettings'),
           tabBarIcon: ({ focused, color }) => <TabbarIcon type="settings" focused={focused} color={color} />,
+          tabBarBadge: settings.badges[4].badgeCount !== 0 ? settings.badges[4].badgeCount : undefined,
         }}
       />
     </BottomTab.Navigator>

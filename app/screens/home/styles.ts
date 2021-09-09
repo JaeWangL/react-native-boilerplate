@@ -7,6 +7,8 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   description: {
-    color: '#414144',
+    fontSize: 80,
+    fontFamily: 'Pretendard',
+    fontWeight: 'bold',
   },
 });
