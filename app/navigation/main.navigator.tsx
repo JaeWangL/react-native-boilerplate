@@ -18,7 +18,7 @@ function MainTabsNavigator(): JSX.Element {
   const [t] = useTranslation(['common']);
 
   const renderTabbarBG = useCallback((): ReactNode => {
-    return <BlurView blurType="light" style={StyleSheet.absoluteFill} />;
+    return <BlurView blurType="light" blurRadius={25} style={StyleSheet.absoluteFill} />;
   }, []);
 
   return (
